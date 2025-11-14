@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wedding App">
+    <meta name="description" content="Wedding information and photo sharing app for JS ♥ PS Wedding">
+    <title>RSVP - JS ♥ PS Wedding</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="wedding-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">JS ♥ PS</div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="groom.html" class="nav-link">Groom</a>
+                <a href="bride.html" class="nav-link">Bride</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="videos.html" class="nav-link">Videos</a>
+                <a href="rsvp.html" class="nav-link active">RSVP</a>
+                <a href="photo-share.html" class="nav-link">Photo Sharing</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section">
+        <div class="container">
+            <h1 class="page-title">RSVP</h1>
+            <p class="rsvp-subtitle">Please confirm your attendance by filling out the form below</p>
+            
+            <form id="rsvpForm" class="rsvp-form">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="association">Association</label>
+                    <select id="association" name="association">
+                        <option value="">Select...</option>
+                        <option value="groom-family">Groom's Family</option>
+                        <option value="bride-family">Bride's Family</option>
+                        <option value="groom-friend">Groom's Friend</option>
+                        <option value="bride-friend">Bride's Friend</option>
+                        <option value="colleague">Colleague</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Will you attend? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="yes" required>
+                            <span>Yes, I will attend</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="no" required>
+                            <span>No, I cannot attend</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit RSVP</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 JS ♥ PS Wedding. Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wedding App">
+    <meta name="description" content="Wedding information and photo sharing app for JS ♥ PS Wedding">
+    <title>Groom - JS ♥ PS Wedding</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="wedding-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">JS ♥ PS</div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="groom.html" class="nav-link active">Groom</a>
+                <a href="bride.html" class="nav-link">Bride</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="videos.html" class="nav-link">Videos</a>
+                <a href="rsvp.html" class="nav-link">RSVP</a>
+                <a href="photo-share.html" class="nav-link">Photo Sharing</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Groom Section -->
+    <section class="person-page">
+        <div class="container">
+            <div class="person-content">
+                <div class="person-image-container">
+                    <img src="assets/groom.jpg" alt="Groom" class="person-image" onerror="this.src='https://via.placeholder.com/600x800/F5E6D3/8B7355?text=Groom+Photo'">
+                </div>
+                <div class="person-details">
+                    <h1 class="person-name">洪劲呏</h1>
+                    <div class="wedding-info">
+                        <div class="info-item">
+                            <span class="info-label">Wedding Date:</span>
+                            <span class="info-value">2026年1月4日</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Time:</span>
+                            <span class="info-value">晚上7点</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Venue:</span>
+                            <span class="info-value">Starview Restaurant, Penang</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Maps:</span>
+                            <div class="map-links">
+                                <a href="https://maps.google.com/?q=Starview+Restaurant+Penang" target="_blank" class="map-link">Open in Google Maps</a>
+                                <a href="https://waze.com/ul?q=Starview+Restaurant+Penang" target="_blank" class="map-link">Open in Waze</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="person-intro">
+                        <p>Come celebrate with us! We are thrilled to share this special day with our family and friends.</p>
+                    </div>
+                    <div class="download-section">
+                        <button class="download-btn" onclick="downloadInvitation('groom')">
+                            📥 Download Invitation PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 JS ♥ PS Wedding. Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

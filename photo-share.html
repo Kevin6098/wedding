@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wedding App">
+    <meta name="description" content="Wedding information and photo sharing app for JS ♥ PS Wedding">
+    <title>Photo Sharing - JS ♥ PS Wedding</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body class="wedding-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">JS ♥ PS</div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="groom.html" class="nav-link">Groom</a>
+                <a href="bride.html" class="nav-link">Bride</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="videos.html" class="nav-link">Videos</a>
+                <a href="rsvp.html" class="nav-link">RSVP</a>
+                <a href="photo-share.html" class="nav-link active">Photo Sharing</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Photo Sharing Section -->
+    <section class="photo-share-section">
+        <div class="container">
+            <h1 class="page-title">Photo Sharing</h1>
+            <p class="section-subtitle">Share your wedding photos with us!</p>
+
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2 class="section-heading">Upload Photos</h2>
+                <div class="upload-area">
+                    <input type="file" id="photoInput" multiple accept="image/*" class="file-input">
+                    <label for="photoInput" class="upload-label">
+                        <span class="upload-icon">📷</span>
+                        <span>Choose Files (Multiple allowed)</span>
+                    </label>
+                </div>
+                <div id="previewContainer" class="preview-container"></div>
+            </div>
+
+            <!-- Guest Photo Gallery -->
+            <div class="gallery-section-share">
+                <div class="gallery-header">
+                    <h2 class="section-heading">Guest Photo Gallery</h2>
+                    <div class="gallery-actions">
+                        <button id="selectAllBtn" class="action-btn">Select All</button>
+                        <button id="downloadSelectedBtn" class="action-btn primary">Download Selected (ZIP)</button>
+                    </div>
+                </div>
+                <div id="guestGallery" class="guest-gallery">
+                    <!-- Guest photos will be populated here -->
+                </div>
+                <p id="emptyGallery" class="empty-message">No photos shared yet. Be the first to upload!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for fullscreen image -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 JS ♥ PS Wedding. Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="photo-share.js"></script>
+</body>
+</html>
+
