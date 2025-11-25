@@ -950,6 +950,10 @@
             color: #D4AF37;
         }
 
+        .action-icon.saved {
+            color: #D4AF37;
+        }
+
         .post-likes {
             padding: 0 15px 8px;
             font-size: 0.95rem;
@@ -1176,6 +1180,266 @@
             cursor: pointer;
         }
 
+        /* 登录页面 */
+        .login-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            min-height: 100%;
+            background: linear-gradient(135deg, #F5D7DA 0%, #F5E6D3 100%);
+        }
+
+        .login-logo {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: #D4AF37;
+        }
+
+        .login-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #5C4A3A;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .login-subtitle {
+            font-size: 1rem;
+            color: #8B7355;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #F5D7DA;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            color: #5C4A3A;
+            margin-bottom: 15px;
+        }
+
+        .login-input:focus {
+            outline: none;
+            border-color: #D4AF37;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 15px;
+            background: #D4AF37;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #8B7355;
+            cursor: pointer;
+        }
+
+        /* 座位地图 */
+        .seat-map-container {
+            padding: 20px;
+            background: #FFFEF9;
+        }
+
+        .seat-map-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .seat-map-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #5C4A3A;
+            margin-bottom: 5px;
+        }
+
+        .seat-map-subtitle {
+            font-size: 0.9rem;
+            color: #8B7355;
+        }
+
+        .table-section {
+            margin-bottom: 30px;
+        }
+
+        .table-label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #D4AF37;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .table-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .seat-item {
+            aspect-ratio: 1;
+            background: white;
+            border: 2px solid #F5D7DA;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: #8B7355;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .seat-item.occupied {
+            background: #F5D7DA;
+            border-color: #D4AF37;
+            color: #5C4A3A;
+        }
+
+        .seat-item.my-seat {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .seat-number {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .seat-name {
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 0 3px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .seat-legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #5C4A3A;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 2px solid #F5D7DA;
+        }
+
+        .legend-color.occupied {
+            background: #F5D7DA;
+            border-color: #D4AF37;
+        }
+
+        .legend-color.my-seat {
+            background: #D4AF37;
+            border-color: #D4AF37;
+        }
+
+        /* 座位管理 */
+        .seat-management {
+            padding: 20px;
+        }
+
+        .guest-list {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .guest-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #F5D7DA;
+            gap: 15px;
+        }
+
+        .guest-item:last-child {
+            border-bottom: none;
+        }
+
+        .guest-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #F5D7DA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #D4AF37;
+        }
+
+        .guest-info {
+            flex: 1;
+        }
+
+        .guest-name {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #5C4A3A;
+            margin-bottom: 3px;
+        }
+
+        .guest-seat {
+            font-size: 0.85rem;
+            color: #8B7355;
+        }
+
+        .assign-seat-btn {
+            padding: 8px 15px;
+            background: #D4AF37;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         /* 响应式调整 */
         @media (max-width: 768px) {
             .screens-grid {
@@ -1214,9 +1478,29 @@
                 </div>
             </div>
 
-            <!-- 2. 主页 -->
+            <!-- 2. 登录页 -->
             <div class="screen-wrapper">
-                <div class="screen-title">2. 主页 / Home Dashboard</div>
+                <div class="screen-title">2. 登录页 / Login</div>
+                <div class="phone-screen">
+                    <div class="screen-content">
+                        <div class="login-screen">
+                            <div class="login-logo">💒</div>
+                            <div class="login-title">JS ♥ PS Wedding</div>
+                            <div class="login-subtitle">欢迎参加我们的婚礼</div>
+                            <div class="login-form">
+                                <input type="text" class="login-input" placeholder="请输入您的姓名或邮箱">
+                                <input type="password" class="login-input" placeholder="请输入密码">
+                                <button class="login-button">登录</button>
+                                <div class="forgot-password">忘记密码？</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. 主页 -->
+            <div class="screen-wrapper">
+                <div class="screen-title">3. 主页 / Home Dashboard</div>
                 <div class="phone-screen">
                     <div class="screen-content">
                         <div class="status-bar">
@@ -1273,9 +1557,9 @@
                                     <div class="feature-desc">了解她的故事</div>
                                 </div>
                                 <div class="feature-card">
-                                    <div class="feature-icon">✉️</div>
-                                    <div class="feature-title">RSVP回复</div>
-                                    <div class="feature-desc">确认出席</div>
+                                    <div class="feature-icon">🪑</div>
+                                    <div class="feature-title">座位地图</div>
+                                    <div class="feature-desc">查看您的座位</div>
                                 </div>
                                 <div class="feature-card">
                                     <div class="feature-icon">📸</div>
@@ -1304,19 +1588,19 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-cog"></i>
-                                <span>设置</span>
+                                <i class="fas fa-bookmark"></i>
+                                <span>收藏</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. 新郎介绍页 -->
+            <!-- 4. 新郎介绍页 -->
             <div class="screen-wrapper">
                 <div class="screen-title">3. 新郎介绍 / Groom Profile</div>
                 <div class="phone-screen">
@@ -1369,8 +1653,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -1434,8 +1718,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -1448,7 +1732,7 @@
 
             <!-- 5. RSVP页面 -->
             <div class="screen-wrapper">
-                <div class="screen-title">5. RSVP回复 / RSVP Form</div>
+                <div class="screen-title">5. 座位地图 / Seat Map</div>
                 <div class="phone-screen">
                     <div class="screen-content">
                         <div class="status-bar">
@@ -1461,51 +1745,104 @@
                         </div>
                         <div class="nav-bar">
                             <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
-                            <div class="nav-title">RSVP回复</div>
+                            <div class="nav-title">座位地图</div>
                             <div class="nav-icon"></div>
                         </div>
-                        <div class="main-content">
-                            <div class="rsvp-header">
-                                <div class="rsvp-title">确认出席</div>
-                                <div class="rsvp-subtitle">请填写以下信息确认您的出席</div>
+                        <div class="main-content seat-map-container">
+                            <div class="seat-map-header">
+                                <div class="seat-map-title">您的座位</div>
+                                <div class="seat-map-subtitle">Table 3 - Seat 12</div>
                             </div>
-                            <div class="form-container">
-                                <div class="form-group">
-                                    <div class="form-label">姓名 <span class="required">*</span></div>
-                                    <input type="text" class="form-input" placeholder="请输入您的姓名">
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-label">邮箱 <span class="required">*</span></div>
-                                    <input type="email" class="form-input" placeholder="your@email.com">
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-label">手机号码 <span class="required">*</span></div>
-                                    <input type="tel" class="form-input" placeholder="+60 12-345-6789">
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-label">与新人关系</div>
-                                    <select class="form-input">
-                                        <option>请选择...</option>
-                                        <option>新郎家人</option>
-                                        <option>新娘家人</option>
-                                        <option>新郎朋友</option>
-                                        <option>新娘朋友</option>
-                                        <option>同事</option>
-                                        <option>其他</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-label">是否出席？ <span class="required">*</span></div>
-                                    <div class="radio-group">
-                                        <div class="radio-option selected">是，我会出席</div>
-                                        <div class="radio-option">否，无法出席</div>
+                            
+                            <!-- Table 1 -->
+                            <div class="table-section">
+                                <div class="table-label">Table 1</div>
+                                <div class="table-grid">
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">1</div>
+                                        <div class="seat-name">张三</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">2</div>
+                                        <div class="seat-name">李四</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">3</div>
+                                        <div class="seat-name">王五</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">4</div>
+                                        <div class="seat-name">赵六</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">5</div>
+                                        <div class="seat-name">孙七</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">6</div>
+                                        <div class="seat-name">周八</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">7</div>
+                                        <div class="seat-name">吴九</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">8</div>
+                                        <div class="seat-name">郑十</div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="form-label">随行人数</div>
-                                    <input type="number" class="form-input" placeholder="0" value="0">
+                            </div>
+
+                            <!-- Table 2 -->
+                            <div class="table-section">
+                                <div class="table-label">Table 2</div>
+                                <div class="table-grid">
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">9</div>
+                                        <div class="seat-name">陈一</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">10</div>
+                                        <div class="seat-name">林二</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">11</div>
+                                        <div class="seat-name">黄三</div>
+                                    </div>
+                                    <div class="seat-item"></div>
                                 </div>
-                                <button class="submit-button">提交RSVP</button>
+                            </div>
+
+                            <!-- Table 3 -->
+                            <div class="table-section">
+                                <div class="table-label">Table 3</div>
+                                <div class="table-grid">
+                                    <div class="seat-item my-seat">
+                                        <div class="seat-number">12</div>
+                                        <div class="seat-name">您</div>
+                                    </div>
+                                    <div class="seat-item occupied">
+                                        <div class="seat-number">13</div>
+                                        <div class="seat-name">刘四</div>
+                                    </div>
+                                    <div class="seat-item"></div>
+                                    <div class="seat-item"></div>
+                                </div>
+                            </div>
+
+                            <div class="seat-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color"></div>
+                                    <span>空座位</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color occupied"></div>
+                                    <span>已分配</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color my-seat"></div>
+                                    <span>我的座位</span>
+                                </div>
                             </div>
                         </div>
                         <div class="bottom-nav">
@@ -1518,21 +1855,21 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item active">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-cog"></i>
-                                <span>设置</span>
+                                <i class="fas fa-bookmark"></i>
+                                <span>收藏</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 6. RSVP成功页 -->
+            <!-- 6. 座位管理页 (Host专用) -->
             <div class="screen-wrapper">
-                <div class="screen-title">6. RSVP成功 / RSVP Success</div>
+                <div class="screen-title">6. 座位管理 / Seat Management (Host Only)</div>
                 <div class="phone-screen">
                     <div class="screen-content">
                         <div class="status-bar">
@@ -1543,15 +1880,83 @@
                                 <i class="fas fa-battery-three-quarters"></i>
                             </div>
                         </div>
-                        <div class="main-content" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                            <div style="text-align: center; padding: 40px;">
-                                <div style="font-size: 5rem; color: #D4AF37; margin-bottom: 20px;">✓</div>
-                                <div style="font-size: 1.8rem; font-weight: bold; color: #5C4A3A; margin-bottom: 15px;">提交成功！</div>
-                                <div style="font-size: 1rem; color: #8B7355; margin-bottom: 30px; line-height: 1.6;">
-                                    感谢您的回复！<br>
-                                    我们期待在婚礼上见到您。
+                        <div class="nav-bar">
+                            <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
+                            <div class="nav-title">座位管理</div>
+                            <div class="nav-icon"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="main-content">
+                            <div class="seat-management">
+                                <div style="background: linear-gradient(135deg, #F5D7DA 0%, #F5E6D3 100%); padding: 20px; margin-bottom: 20px; border-radius: 15px;">
+                                    <div style="font-size: 1.2rem; font-weight: bold; color: #5C4A3A; margin-bottom: 5px;">座位安排</div>
+                                    <div style="font-size: 0.9rem; color: #8B7355;">为客人分配座位</div>
                                 </div>
-                                <button class="submit-button" style="max-width: 200px; margin: 0 auto;">返回首页</button>
+                                <div class="guest-list">
+                                    <div class="guest-item">
+                                        <div class="guest-avatar">👤</div>
+                                        <div class="guest-info">
+                                            <div class="guest-name">张三</div>
+                                            <div class="guest-seat">Table 1 - Seat 1</div>
+                                        </div>
+                                        <button class="assign-seat-btn">修改</button>
+                                    </div>
+                                    <div class="guest-item">
+                                        <div class="guest-avatar">👤</div>
+                                        <div class="guest-info">
+                                            <div class="guest-name">李四</div>
+                                            <div class="guest-seat">Table 1 - Seat 2</div>
+                                        </div>
+                                        <button class="assign-seat-btn">修改</button>
+                                    </div>
+                                    <div class="guest-item">
+                                        <div class="guest-avatar">👤</div>
+                                        <div class="guest-info">
+                                            <div class="guest-name">王五</div>
+                                            <div class="guest-seat">Table 1 - Seat 3</div>
+                                        </div>
+                                        <button class="assign-seat-btn">修改</button>
+                                    </div>
+                                    <div class="guest-item">
+                                        <div class="guest-avatar">👤</div>
+                                        <div class="guest-info">
+                                            <div class="guest-name">赵六</div>
+                                            <div class="guest-seat">Table 2 - Seat 9</div>
+                                        </div>
+                                        <button class="assign-seat-btn">修改</button>
+                                    </div>
+                                    <div class="guest-item">
+                                        <div class="guest-avatar">👤</div>
+                                        <div class="guest-info">
+                                            <div class="guest-name">孙七</div>
+                                            <div class="guest-seat">未分配</div>
+                                        </div>
+                                        <button class="assign-seat-btn">分配</button>
+                                    </div>
+                                </div>
+                                <div style="padding: 20px; background: #F5E6D3; border-radius: 15px; margin-top: 20px;">
+                                    <div style="font-size: 0.9rem; color: #5C4A3A; line-height: 1.6;">
+                                        <i class="fas fa-info-circle" style="color: #D4AF37; margin-right: 8px;"></i>
+                                        <strong>提示：</strong>只有主持人可以管理座位安排。点击"分配"或"修改"按钮为客人安排座位。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-nav">
+                            <div class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <span>首页</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-images"></i>
+                                <span>照片</span>
+                            </div>
+                            <div class="nav-item active">
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-bookmark"></i>
+                                <span>收藏</span>
                             </div>
                         </div>
                     </div>
@@ -1596,9 +2001,8 @@
                                 <div class="post-actions">
                                     <i class="fas fa-heart action-icon liked"></i>
                                     <i class="far fa-comment action-icon"></i>
-                                    <i class="far fa-paper-plane action-icon"></i>
                                     <div style="flex: 1;"></div>
-                                    <i class="far fa-bookmark action-icon"></i>
+                                    <i class="fas fa-bookmark action-icon saved"></i>
                                 </div>
                                 <div class="post-likes">128 个赞</div>
                                 <div class="post-caption">
@@ -1632,7 +2036,6 @@
                                 <div class="post-actions">
                                     <i class="far fa-heart action-icon"></i>
                                     <i class="far fa-comment action-icon"></i>
-                                    <i class="far fa-paper-plane action-icon"></i>
                                     <div style="flex: 1;"></div>
                                     <i class="far fa-bookmark action-icon"></i>
                                 </div>
@@ -1656,8 +2059,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -1684,7 +2087,7 @@
                         <div class="nav-bar">
                             <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
                             <div class="nav-title">照片</div>
-                            <div class="nav-icon"><i class="fas fa-share-alt"></i></div>
+                            <div class="nav-icon"></div>
                         </div>
                         <div class="main-content" style="padding-bottom: 0;">
                             <div class="photo-post">
@@ -1705,9 +2108,8 @@
                                 <div class="post-actions">
                                     <i class="fas fa-heart action-icon liked"></i>
                                     <i class="far fa-comment action-icon"></i>
-                                    <i class="far fa-paper-plane action-icon"></i>
                                     <div style="flex: 1;"></div>
-                                    <i class="far fa-bookmark action-icon"></i>
+                                    <i class="fas fa-bookmark action-icon saved"></i>
                                 </div>
                                 <div class="post-likes">128 个赞</div>
                                 <div class="post-caption">
@@ -1741,8 +2143,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -1830,8 +2232,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -1905,8 +2307,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -1993,8 +2395,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -2071,8 +2473,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -2165,8 +2567,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item active">
                                 <i class="fas fa-cog"></i>
@@ -2245,8 +2647,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -2349,8 +2751,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item">
                                 <i class="fas fa-cog"></i>
@@ -2452,8 +2854,8 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
                             <div class="nav-item active">
                                 <i class="fas fa-cog"></i>
@@ -2464,9 +2866,140 @@
                 </div>
             </div>
 
-            <!-- 17. 空状态页 -->
+            <!-- 17. 我的收藏页 -->
             <div class="screen-wrapper">
-                <div class="screen-title">17. 空状态 / Empty State</div>
+                <div class="screen-title">17. 我的收藏 / My Collections</div>
+                <div class="phone-screen">
+                    <div class="screen-content">
+                        <div class="status-bar">
+                            <div class="status-left">9:41</div>
+                            <div class="status-right">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        <div class="nav-bar">
+                            <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
+                            <div class="nav-title">我的收藏</div>
+                            <div class="nav-icon"><i class="fas fa-search"></i></div>
+                        </div>
+                        <div class="main-content">
+                            <div style="padding: 15px; background: linear-gradient(135deg, #F5D7DA 0%, #F5E6D3 100%);">
+                                <div style="font-size: 1.2rem; font-weight: bold; color: #5C4A3A; margin-bottom: 5px;">已收藏 12 张照片</div>
+                                <div style="font-size: 0.85rem; color: #8B7355;">你保存的所有美好瞬间</div>
+                            </div>
+                            <div class="photo-feed">
+                                <!-- Saved Post 1 -->
+                                <div class="photo-post">
+                                    <div class="post-header">
+                                        <div class="post-avatar">👤</div>
+                                        <div class="post-user">
+                                            <div class="post-username">张三</div>
+                                            <div class="post-time">2小时前</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-image">
+                                        📸
+                                        <div class="post-image-overlay">
+                                            <span class="tag-badge-overlay">#婚礼现场</span>
+                                            <span class="tag-badge-overlay">#美好瞬间</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-actions">
+                                        <i class="fas fa-heart action-icon liked"></i>
+                                        <i class="far fa-comment action-icon"></i>
+                                        <div style="flex: 1;"></div>
+                                        <i class="fas fa-bookmark action-icon saved"></i>
+                                    </div>
+                                    <div class="post-likes">128 个赞</div>
+                                    <div class="post-caption">
+                                        <span class="username">张三</span>
+                                        今天真是太美好了！祝福新人 💕
+                                    </div>
+                                </div>
+                                <!-- Saved Post 2 -->
+                                <div class="photo-post">
+                                    <div class="post-header">
+                                        <div class="post-avatar">👤</div>
+                                        <div class="post-user">
+                                            <div class="post-username">李四</div>
+                                            <div class="post-time">5小时前</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-image">
+                                        💕
+                                        <div class="post-image-overlay">
+                                            <span class="tag-badge-overlay">#祝福</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-actions">
+                                        <i class="far fa-heart action-icon"></i>
+                                        <i class="far fa-comment action-icon"></i>
+                                        <div style="flex: 1;"></div>
+                                        <i class="fas fa-bookmark action-icon saved"></i>
+                                    </div>
+                                    <div class="post-likes">89 个赞</div>
+                                    <div class="post-caption">
+                                        <span class="username">李四</span>
+                                        祝福新人百年好合！🎉
+                                    </div>
+                                </div>
+                                <!-- Saved Post 3 -->
+                                <div class="photo-post">
+                                    <div class="post-header">
+                                        <div class="post-avatar">👤</div>
+                                        <div class="post-user">
+                                            <div class="post-username">王五</div>
+                                            <div class="post-time">1天前</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-image">
+                                        🌹
+                                        <div class="post-image-overlay">
+                                            <span class="tag-badge-overlay">#仪式</span>
+                                            <span class="tag-badge-overlay">#新人</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-actions">
+                                        <i class="fas fa-heart action-icon liked"></i>
+                                        <i class="far fa-comment action-icon"></i>
+                                        <div style="flex: 1;"></div>
+                                        <i class="fas fa-bookmark action-icon saved"></i>
+                                    </div>
+                                    <div class="post-likes">156 个赞</div>
+                                    <div class="post-caption">
+                                        <span class="username">王五</span>
+                                        美丽的仪式，祝福新人！
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-nav">
+                            <div class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <span>首页</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-images"></i>
+                                <span>照片</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
+                            </div>
+                            <div class="nav-item active">
+                                <i class="fas fa-bookmark"></i>
+                                <span>收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. 空状态页 -->
+            <div class="screen-wrapper">
+                <div class="screen-title">18. 空状态 / Empty State (Collections)</div>
                 <div class="phone-screen">
                     <div class="screen-content">
                         <div class="status-bar">
@@ -2500,12 +3033,12 @@
                                 <span>照片</span>
                             </div>
                             <div class="nav-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>RSVP</span>
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
                             </div>
-                            <div class="nav-item">
-                                <i class="fas fa-cog"></i>
-                                <span>设置</span>
+                            <div class="nav-item active">
+                                <i class="fas fa-bookmark"></i>
+                                <span>收藏</span>
                             </div>
                         </div>
                     </div>
