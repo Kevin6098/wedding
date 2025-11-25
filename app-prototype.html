@@ -6,6 +6,84 @@
     <title>婚礼应用 - 完整原型设计</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* 主题颜色变量定义 */
+        :root {
+            /* 默认主题 - 浪漫粉金 */
+            --theme-primary: #D4AF37;
+            --theme-secondary: #F5D7DA;
+            --theme-accent: #F5E6D3;
+            --theme-bg: #FFFEF9;
+            --theme-text: #5C4A3A;
+            --theme-text-light: #8B7355;
+            --theme-name: '浪漫粉金';
+        }
+
+        /* 主题1 - 浪漫粉金 (默认) */
+        [data-theme="romantic"] {
+            --theme-primary: #D4AF37;
+            --theme-secondary: #F5D7DA;
+            --theme-accent: #F5E6D3;
+            --theme-bg: #FFFEF9;
+            --theme-text: #5C4A3A;
+            --theme-text-light: #8B7355;
+            --theme-name: '浪漫粉金';
+        }
+
+        /* 主题2 - 优雅紫金 */
+        [data-theme="elegant"] {
+            --theme-primary: #9B7ED9;
+            --theme-secondary: #E8D5F2;
+            --theme-accent: #F3E8FF;
+            --theme-bg: #FAF8FF;
+            --theme-text: #4A3A5C;
+            --theme-text-light: #7A6B8A;
+            --theme-name: '优雅紫金';
+        }
+
+        /* 主题3 - 清新蓝绿 */
+        [data-theme="fresh"] {
+            --theme-primary: #4ECDC4;
+            --theme-secondary: #B8E6E1;
+            --theme-accent: #E0F5F3;
+            --theme-bg: #F0FDFC;
+            --theme-text: #2D5A55;
+            --theme-text-light: #5A8A85;
+            --theme-name: '清新蓝绿';
+        }
+
+        /* 主题4 - 温暖橙红 */
+        [data-theme="warm"] {
+            --theme-primary: #FF6B6B;
+            --theme-secondary: #FFD4D4;
+            --theme-accent: #FFE8E8;
+            --theme-bg: #FFF5F5;
+            --theme-text: #5C2A2A;
+            --theme-text-light: #8B5A5A;
+            --theme-name: '温暖橙红';
+        }
+
+        /* 主题5 - 经典黑白 */
+        [data-theme="classic"] {
+            --theme-primary: #2C3E50;
+            --theme-secondary: #ECF0F1;
+            --theme-accent: #BDC3C7;
+            --theme-bg: #FFFFFF;
+            --theme-text: #2C3E50;
+            --theme-text-light: #7F8C8D;
+            --theme-name: '经典黑白';
+        }
+
+        /* 主题6 - 梦幻粉紫 */
+        [data-theme="dreamy"] {
+            --theme-primary: #FF9FF3;
+            --theme-secondary: #FFD6F5;
+            --theme-accent: #FFEBF9;
+            --theme-bg: #FFF5FC;
+            --theme-text: #5C2A4A;
+            --theme-text-light: #8B5A6A;
+            --theme-name: '梦幻粉紫';
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -1440,6 +1518,124 @@
             cursor: pointer;
         }
 
+        /* 主题选择 */
+        .theme-selection {
+            padding: 20px;
+        }
+
+        .theme-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .theme-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #5C4A3A;
+            margin-bottom: 10px;
+        }
+
+        .theme-subtitle {
+            font-size: 0.9rem;
+            color: #8B7355;
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .theme-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            border: 3px solid #F5D7DA;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .theme-card.selected {
+            border-color: #D4AF37;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .theme-card.selected::after {
+            content: '✓';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: #D4AF37;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .theme-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-preview.romantic {
+            background: linear-gradient(135deg, #F5D7DA 0%, #F5E6D3 100%);
+        }
+
+        .theme-preview.elegant {
+            background: linear-gradient(135deg, #E8D5F2 0%, #F3E8FF 100%);
+        }
+
+        .theme-preview.fresh {
+            background: linear-gradient(135deg, #B8E6E1 0%, #E0F5F3 100%);
+        }
+
+        .theme-preview.warm {
+            background: linear-gradient(135deg, #FFD4D4 0%, #FFE8E8 100%);
+        }
+
+        .theme-preview.classic {
+            background: linear-gradient(135deg, #ECF0F1 0%, #BDC3C7 100%);
+        }
+
+        .theme-preview.dreamy {
+            background: linear-gradient(135deg, #FFD6F5 0%, #FFEBF9 100%);
+        }
+
+        .theme-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #5C4A3A;
+            margin-bottom: 5px;
+        }
+
+        .theme-colors {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .theme-color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.1);
+        }
+
         /* 响应式调整 */
         @media (max-width: 768px) {
             .screens-grid {
@@ -2517,6 +2713,16 @@
                                 </div>
                                 <div class="settings-item">
                                     <div class="settings-left">
+                                        <div class="settings-icon"><i class="fas fa-palette"></i></div>
+                                        <div class="settings-text">
+                                            <div class="settings-title">主题颜色</div>
+                                            <div class="settings-desc">浪漫粉金</div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-arrow"><i class="fas fa-chevron-right"></i></div>
+                                </div>
+                                <div class="settings-item">
+                                    <div class="settings-left">
                                         <div class="settings-icon"><i class="fas fa-language"></i></div>
                                         <div class="settings-text">
                                             <div class="settings-title">语言</div>
@@ -3044,6 +3250,128 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 19. 主题选择页 -->
+            <div class="screen-wrapper">
+                <div class="screen-title">19. 主题选择 / Theme Selection</div>
+                <div class="phone-screen">
+                    <div class="screen-content">
+                        <div class="status-bar">
+                            <div class="status-left">9:41</div>
+                            <div class="status-right">
+                                <i class="fas fa-signal"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        <div class="nav-bar">
+                            <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
+                            <div class="nav-title">主题颜色</div>
+                            <div class="nav-icon"></div>
+                        </div>
+                        <div class="main-content">
+                            <div class="theme-selection">
+                                <div class="theme-header">
+                                    <div class="theme-title">选择主题</div>
+                                    <div class="theme-subtitle">选择您喜欢的颜色主题</div>
+                                </div>
+                                <div class="themes-grid">
+                                    <!-- 主题1 - 浪漫粉金 -->
+                                    <div class="theme-card selected" data-theme="romantic">
+                                        <div class="theme-preview romantic">💕</div>
+                                        <div class="theme-name">浪漫粉金</div>
+                                        <div style="font-size: 0.8rem; color: #8B7355; margin-bottom: 10px;">经典浪漫风格</div>
+                                        <div class="theme-colors">
+                                            <div class="theme-color-dot" style="background: #D4AF37;"></div>
+                                            <div class="theme-color-dot" style="background: #F5D7DA;"></div>
+                                            <div class="theme-color-dot" style="background: #F5E6D3;"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 主题2 - 优雅紫金 -->
+                                    <div class="theme-card" data-theme="elegant">
+                                        <div class="theme-preview elegant">👑</div>
+                                        <div class="theme-name">优雅紫金</div>
+                                        <div style="font-size: 0.8rem; color: #8B7355; margin-bottom: 10px;">高贵优雅风格</div>
+                                        <div class="theme-colors">
+                                            <div class="theme-color-dot" style="background: #9B7ED9;"></div>
+                                            <div class="theme-color-dot" style="background: #E8D5F2;"></div>
+                                            <div class="theme-color-dot" style="background: #F3E8FF;"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 主题3 - 清新蓝绿 -->
+                                    <div class="theme-card" data-theme="fresh">
+                                        <div class="theme-preview fresh">🌊</div>
+                                        <div class="theme-name">清新蓝绿</div>
+                                        <div style="font-size: 0.8rem; color: #8B7355; margin-bottom: 10px;">清新自然风格</div>
+                                        <div class="theme-colors">
+                                            <div class="theme-color-dot" style="background: #4ECDC4;"></div>
+                                            <div class="theme-color-dot" style="background: #B8E6E1;"></div>
+                                            <div class="theme-color-dot" style="background: #E0F5F3;"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 主题4 - 温暖橙红 -->
+                                    <div class="theme-card" data-theme="warm">
+                                        <div class="theme-preview warm">🔥</div>
+                                        <div class="theme-name">温暖橙红</div>
+                                        <div style="font-size: 0.8rem; color: #8B7355; margin-bottom: 10px;">热情温暖风格</div>
+                                        <div class="theme-colors">
+                                            <div class="theme-color-dot" style="background: #FF6B6B;"></div>
+                                            <div class="theme-color-dot" style="background: #FFD4D4;"></div>
+                                            <div class="theme-color-dot" style="background: #FFE8E8;"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 主题5 - 经典黑白 -->
+                                    <div class="theme-card" data-theme="classic">
+                                        <div class="theme-preview classic">⚫</div>
+                                        <div class="theme-name">经典黑白</div>
+                                        <div style="font-size: 0.8rem; color: #8B7355; margin-bottom: 10px;">简约经典风格</div>
+                                        <div class="theme-colors">
+                                            <div class="theme-color-dot" style="background: #2C3E50;"></div>
+                                            <div class="theme-color-dot" style="background: #ECF0F1;"></div>
+                                            <div class="theme-color-dot" style="background: #BDC3C7;"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 主题6 - 梦幻粉紫 -->
+                                    <div class="theme-card" data-theme="dreamy">
+                                        <div class="theme-preview dreamy">✨</div>
+                                        <div class="theme-name">梦幻粉紫</div>
+                                        <div style="font-size: 0.8rem; color: #8B7355; margin-bottom: 10px;">梦幻甜美风格</div>
+                                        <div class="theme-colors">
+                                            <div class="theme-color-dot" style="background: #FF9FF3;"></div>
+                                            <div class="theme-color-dot" style="background: #FFD6F5;"></div>
+                                            <div class="theme-color-dot" style="background: #FFEBF9;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding: 20px; background: #F5E6D3; border-radius: 15px; margin-top: 20px;">
+                                    <div style="font-size: 0.9rem; color: #5C4A3A; line-height: 1.6;">
+                                        <i class="fas fa-info-circle" style="color: #D4AF37; margin-right: 8px;"></i>
+                                        <strong>提示：</strong>选择主题后，应用的所有界面颜色将自动更新。您随时可以在设置中更改主题。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-nav">
+                            <div class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <span>首页</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-images"></i>
+                                <span>照片</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-chair"></i>
+                                <span>座位</span>
+                            </div>
+                            <div class="nav-item">
+                                <i class="fas fa-bookmark"></i>
+                                <span>收藏</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 设计说明 -->
@@ -3070,6 +3398,14 @@
                     <li><strong>地图导航：</strong>婚礼地点定位和导航功能</li>
                     <li><strong>通知系统：</strong>推送通知管理，提醒用户重要信息</li>
                     <li><strong>标签管理（Host专用）：</strong>主持人可以创建、查看和管理照片标签，查看标签使用统计</li>
+                    <li><strong>主题系统：</strong>
+                        <ul style="margin-top: 5px; padding-left: 20px;">
+                            <li>6种主题颜色方案：浪漫粉金、优雅紫金、清新蓝绿、温暖橙红、经典黑白、梦幻粉紫</li>
+                            <li>用户可以在设置中选择喜欢的主题</li>
+                            <li>主题切换后，应用所有界面的颜色自动更新</li>
+                            <li>每个主题包含主色调、辅助色、背景色等完整配色方案</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
